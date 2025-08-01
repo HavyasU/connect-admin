@@ -25,7 +25,9 @@ export const serverCon = axios.create({
     Authorization: adminToken ? "Bearer " + adminToken : "",
   },
 });
-export const baseUrlForUploads = backend_url + "uploads";
+// export const baseUrlForUploads = backend_url + "uploads"; //needed when using gridfs
+export const baseUrlForUploads = ""; //changed to Cloudinary
+
 
 export const ToastMessage = (message) => {
   toast(message);
@@ -44,7 +46,7 @@ function App() {
   const [admin, setAdmin] = useState(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [postsData, setPostsData] = useState([]);
-  const [showSidebar, setShowSidebar] = useState(true);
+  // const [showSidebar, setShowSidebar] = useState(true);
   let mouseDivRef = useRef();
   const fetchPosts = async (search) => {
     let res = await fetchRequestCaller({
@@ -52,8 +54,8 @@ function App() {
       method: "POST",
       data: search
         ? {
-            search,
-          }
+          search,
+        }
         : {},
     });
     setPostsData(res?.data);
@@ -117,8 +119,8 @@ function App() {
         className="w-full flex justify-start items-start mt-24 md:p-4
         "
       >
-        {showSidebar && (
-          <Box className="md:w-1/6 z-50">
+        {isMenuOpen && (
+          <Box className=" sidebar-animation md:w-1/6 z-50">
             <Sidebar
               isMenuOpen={isMenuOpen}
               setIsMenuOpen={setIsMenuOpen}

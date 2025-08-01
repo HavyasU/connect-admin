@@ -50,7 +50,7 @@ const Users = ({ admin }) => {
                     <img
                       src={
                         user?.profileUrl
-                          ? `${baseUrlForUploads}/${user?.profileUrl}`
+                          ? `${baseUrlForUploads}${user?.profileUrl}`
                           : NoProfile
                       }
                       alt=""

@@ -22,3 +22,11 @@ hr {
   box-shadow: 0 0 20px 10px cyan;
   background-color: red;
 }
+
+.chatbox-scrollbar::-webkit-scrollbar {
+  -webkit-appearance: none;
+  background-color: white;
+  display: block;
+  width: 30px;
+  color: red;
+}

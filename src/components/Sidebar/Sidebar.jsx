@@ -36,7 +36,7 @@ const Sidebar = ({ isMenuOpen, setIsMenuOpen, admin, setAdmin }) => {
   ];
   return (
     <>
-      <Box className=" fixed left-3  top-[6.5rem] min-h-[86vh] rounded shadow-lg shadow-gray-900  w-1/6   bg-secondaruy  max-md:hidden">
+      <Box className="  fixed left-3  top-[6.5rem] min-h-[106vh] rounded shadow-lg shadow-gray-900  w-1/6   bg-secondary  ">
         <Flex wrap={true} direction={"column"} gap={2}>
           {sidebarItems?.map((ele) => {
             return (
@@ -67,9 +67,8 @@ const Sidebar = ({ isMenuOpen, setIsMenuOpen, admin, setAdmin }) => {
         </Flex>
       </Box>
       <Box
-        className={`md:hidden fixed top-3   bg-[#2d3748] w-1/2 h-[99vh] rounded-md transition-all duration-700 ease-in-out ${
-          isMenuOpen ? "left-3" : "left-[-25rem]"
-        }`}
+        className={`md:hidden fixed top-3   bg-[#2d3748] w-1/2 h-[99vh] rounded-md transition-all duration-700 ease-in-out ${true ? "left-3" : "left-[-25rem]"
+          }`}
       >
         <Box>
           <Flex direction={"column"} gap={2}>

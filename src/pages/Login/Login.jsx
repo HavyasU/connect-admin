@@ -52,7 +52,7 @@ const Login = ({ admin, setAdmin }) => {
         <div className="w-full  md:w-2/3 h-fit lg:h-full 2xl:h-5/6 max-xl:h-full py-4 lg:py-0 flex bg-[#1A1919] rounded-xl shadow-xl overflow-hidden ">
           <div className="w-full  lg:w-1/2 m-auto h-full p-10 2xl:px-20 flex flex-col justify-center  gap-1">
             <Link to={"/"} className="flex flex-col gap-0 items-center">
-              <div className="w-full flex  gap-2 items-center mb-5">
+              <div className="w-full flex gap-2 items-center mb-5">
                 <div className="logo p-2 bg-[#065ad8] rounded text-white">
                   <TbSocial />
                 </div>

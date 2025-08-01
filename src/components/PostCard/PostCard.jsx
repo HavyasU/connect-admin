@@ -18,7 +18,7 @@ const ReplyCard = ({ reply, handleLike }) => {
           <img
             src={
               reply?.userId?.profileUrl
-                ? `${baseUrlForUploads}/${reply?.userId?.profileUrl}`
+                ? `${baseUrlForUploads}${reply?.userId?.profileUrl}`
                 : NoProfile
             }
             alt={reply?.userId?.firstName}
@@ -87,7 +87,7 @@ const PostCard = ({ post, fetchPosts }) => {
           <img
             src={
               post?.userId?.profileUrl
-                ? `${baseUrlForUploads}/${post?.userId?.profileUrl}`
+                ? `${baseUrlForUploads}${post?.userId?.profileUrl}`
                 : NoProfile
             }
             alt={post?.userId?.firstName}
@@ -141,7 +141,7 @@ const PostCard = ({ post, fetchPosts }) => {
         {post?.type === "image" && post?.media && (
           <Box className="w-full h-full rounded-lg overflow-hidden">
             <img
-              src={`${baseUrlForUploads}/${post?.media}`}
+              src={`${baseUrlForUploads}${post?.media}`}
               alt="post image"
               className="w-full md:max-h-96   md:object-contain  mt-2 rounded-lg "
             />
@@ -153,7 +153,7 @@ const PostCard = ({ post, fetchPosts }) => {
               muted={!volumeHigh}
               autoPlay
               loop
-              src={`${baseUrlForUploads}/${post?.media}`}
+              src={`${baseUrlForUploads}${post?.media}`}
               alt="post image"
               className="w-full mt-2 rounded-lg md:h-[30rem]"
             />
@@ -224,7 +224,7 @@ const PostCard = ({ post, fetchPosts }) => {
                     <img
                       src={
                         comment?.userId?.profileUrl
-                          ? `${baseUrlForUploads}/${comment?.userId?.profileUrl}`
+                          ? `${baseUrlForUploads}${comment?.userId?.profileUrl}`
                           : NoProfile
                       }
                       alt={comment?.userId?.firstName}
