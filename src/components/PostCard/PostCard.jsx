@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import moment from "moment";
 import { BiComment, BiLike, BiSolidLike } from "react-icons/bi";
 import { MdOutlineDeleteOutline } from "react-icons/md";
-import { useForm } from "react-hook-form";
 import { NoProfile } from "../../assets";
 import { CustomButton, Loading, TextInput } from "../elementComponents";
 import { baseUrlForUploads, ToastMessage } from "../../App";
